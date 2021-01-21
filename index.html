@@ -16,10 +16,13 @@ nightDayHandler(this);">
   </article>
   <input type="button" value="fetch" onclidk"
   fetch('html').then(function(response){
-    reponse.text().then(function(text){
-      documents.querySelector('article').innerHTML = text;
-    })
-  })
+        if(response.status == '404'){
+          alert('Not found')
+        }
+      });
+      console.log(1);
+      console.log(2);
+    ">
   
 
 <div id="grid">
