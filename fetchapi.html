@@ -7,18 +7,17 @@
 
   </head>
   <script>
-   function fetchPage(name){
-    fetch(name)
-  }
 
-  if(location.hash){
-    alert(location.hash);
-  } else {
-    alert('none');
-  }
+
 
   </script>
-     <h1><a onclick="fetchPage('https://coyo-underdog.github.io/web-tutorial/1.html')">'1.html'</a><h1>
+  <input type="button" value="fetch" onclick="
+     fetch('html').then(function(response){
+       response.text().then(function(text){
+         document.querySelector('article').innerHTML = text;
+       })
+     })
+   alert(location.hash);">
       <article >
 
       </article>
