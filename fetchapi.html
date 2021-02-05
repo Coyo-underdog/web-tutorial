@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  </head>
+  <script>
+  function fetchPage(name){
+    fetch(name).then(function(response){
+      response.text().then(function(text){
+      document.querySelector('article').innerHTML = text;
+      })
+    });
+  }
+
+  if(location.hash){
+    alert(location.hash);
+  } else {
+    alert('none');
+  }
+
+  </script>
+    <h1><a href="1.html" onclick="fetchPage('https://coyo-underdog.github.io/web-tutorial/1.html')">'1.html'</a><h1>
+      <article >
+
+      </article>
+  <body>
+  </body>
+</html>
