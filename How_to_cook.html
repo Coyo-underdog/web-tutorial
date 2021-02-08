@@ -8,24 +8,62 @@
 
   </head>
   <body>
-      <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v9.0&appId=458130168549273&autoLogAppEvents=1" nonce="ldYJpgdM"></script>
-<div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="true"></div>
-    <h1>코요의 쿠킹스터디</h1>
-
+    <!-- <div id="fb-root"></div> -->
+  <!-- <script async defer crossorigin="anonymous" -->
+  <!-- src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v9.0&appId=458130168549273&autoLogAppEvents=1" -->
+  <!-- nonce="ldYJpgdM"></script> -->
+<!-- <div class="fb-login-button" -->
+<!-- data-width="" -->
+<!-- data-size="large" -->
+<!-- data-button-type="continue_with" -->
+<!-- data-layout="default" -->
+<!-- data-auto-logout-link="true" -->
+<!-- data-use-continue-as="true"></div> -->
+    <h1><a href="https://coyo-underdog.github.io/web-tutorial/How_to_cook.html">코요의 쿠킹스터디</a></h1>
+    <script>
+    function fetchPage(name){
+      fetch(name).then(function(response){
+        response.text().then(function(text){
+          document.querySelector('article').innerHTML = text;
+        })
+      });
+    }
+    if(location.hash){
+      fetchPage(location.hash.substr(2));
+    } else {
+      fetchPage('welcome');
+    }
+    fetch('list1').then(function(response){
+      response.text().then(function(text){
+        var items = text.split(',');
+        var i = 0;
+        var tags = '';
+        while(i<items.length){
+          var item = items[i];
+          item = item.trim();
+          var tag = '<li><a href="#!'+item+'" onclick="fetchPage(\''+item+'\')">'+item+'</a></li>';
+          tags = tags + tag;
+          i = i + 1;
+        }
+        document.querySelector('#nav').innerHTML = tags;
+      })
+    });
+    </script>
     <div id=grid>
-    <ol>
-      <li><a href="vegin.html">요리입문</a></li>
-      <li><a href="sauce.html">소스</a></li>
-      <li><a href="cook.html">겉바속촉</a></li>
+    <ol id="nav">
+
         </ol>
 <div id=article>
         <article>
           <h2>요리의 세계에 오신 것을 환영합니다.</h2>
           <P>요리의 세계에 오신 것을 환영합니다....</P>
+          <img id=p1 src="picture1.jpg" alt="Picture" width="500" height="300">
+    </div>
+</div>
+
         </article>
       </div>
       </div>
-    
+
   </body>
 </html>
