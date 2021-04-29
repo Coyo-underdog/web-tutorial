@@ -1,0 +1,60 @@
+#racingcar{
+margin-top:50px;
+border-radius: 8px;
+box-shadow:5px 5px 10px gray;
+display: block;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+#inertia{
+margin-top:10px;
+border-radius: 8px;
+box-shadow:5px 5px 10px gray;
+display: block;
+margin-left: auto;
+margin-right: auto;
+
+}
+#problem{
+  border-radius: 8px;
+  box-shadow:5px 5px 10px gray;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#grap{
+  border-radius: 8px;
+  box-shadow:5px 5px 10px gray;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formula{
+  border-style: solid;
+  border-radius:30px;
+    background-color:white;
+    width: 650px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.name{
+  border-style: solid;
+  border-radius:20px;
+  border-color:lightblue;
+    background-color: lightblue;
+    width:23%;
+
+}
+
+.middle{
+  width: 800px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
